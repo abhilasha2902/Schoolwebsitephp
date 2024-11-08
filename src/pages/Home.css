@@ -1,0 +1,80 @@
+/* Home.css */
+
+.page-container1 {
+    position: relative;
+    height: 100vh; /* Full-screen background */
+    background-image: url('https://img.freepik.com/premium-photo/nursery-kids-hd-8k-wallpaper-stock-photographic-image_890746-118405.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Overlay for the content to make it stand out on the background */
+.content-overlay {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background for readability */
+    padding: 40px 60px;
+    border-radius: 10px;
+    color: #fff; /* White text for contrast */
+    max-width: 800px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Title and description styles */
+.page-title {
+    font-size: 4rem; /* Large font size */
+    font-weight: bold;
+    color: #ffdd57; /* Accent color for the title */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+.page-description {
+    font-size: 1.8rem; /* Slightly larger tagline */
+    line-height: 1.6;
+    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    margin-top: 1rem;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .content-overlay {
+        padding: 20px;
+        width: 90%;
+    }
+    .page-title {
+        font-size: 3rem;
+    }
+    .page-description {
+        font-size: 1.4rem;
+    }
+}
+
+/* Photo Slider Styling */
+.photo-slider {
+    width: 60%; /* Slider width */
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.slider-image {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+}

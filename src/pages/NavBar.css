@@ -1,0 +1,39 @@
+/* components/NavBar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(234, 11, 29, 0.8); /* Semi-transparent red */
+    color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(6px); /* Adds a slight blur for clarity */
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar-link {
+    color: #f9e1e3; /* Light red */
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-link:hover {
+    background-color: rgba(250, 247, 247, 0.2); /* Light transparent background on hover */
+    color: #bd6670; /* Softer red text */
+}
+
+.navbar-link:active {
+    background-color: rgba(255, 255, 255, 0.3); /* More visible background on click */
+}
