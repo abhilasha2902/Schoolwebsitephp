@@ -25,26 +25,25 @@ const Home = () => {
 
       {/* Main Content Section */}
       <div className="page-container1">
-        <div className="content-overlay">
-          <h1 className="page-title">RPS International School</h1>
-          <p className="page-description">
-            We offer quality education, state-of-the-art facilities, and an excellent faculty team.
-          </p>
-        </div>
+      
+          <h1 className="page-title">RPS INTERNATIONAL SCHOOL</h1>
+         
+       
       </div>
 
       {/* Photo Slider Section */}
       <div className="photo-slider">
         <Slider {...sliderSettings}>
-          <div>
-            <img src="/images/rpshome3.png" alt="School Campus" className="slider-image" />
+        <div>
+            <img src={require("../images/slider3.jpg")} alt="School Events" className="slider-image" />
           </div>
           <div>
-            <img src="/images/rpshome2.webp" alt="Students in Classroom" className="slider-image" />
+            <img src={require("../images/slider2.avif")} alt="School Campus" className="slider-image" />
           </div>
           <div>
-            <img src="/images/rpshome4.jpg" alt="School Events" className="slider-image" />
+            <img src={require("../images/slider1.jpg")} alt="Students in Classroom" className="slider-image" />
           </div>
+          
         </Slider>
       </div>
 

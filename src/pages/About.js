@@ -27,7 +27,7 @@ const About = () => {
     <div className="about-container">
       <NavBar />
       <div className="about-content">
-        <h2 className="page-title">About RPS International School</h2>
+        <h2 className="page-title1">About RPS International School</h2>
         <p className="about-text">
           RPS International School was inaugurated on 16th February 2020 with the vision to provide quality education to young children in a nurturing and supportive environment. Our school caters primarily to children under the 6th standard, focusing on building a strong educational foundation during these formative years. Our mission is to ensure that every child, regardless of their background, has access to the tools, resources, and guidance necessary to succeed in their educational journey.
         </p>
