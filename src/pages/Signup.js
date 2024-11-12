@@ -1,55 +1,45 @@
-import React, { useState } from 'react';
-import NavBar from './Navbar';
-import signup from '../pages/Singup.css'; // Importing CSS
+// frontend/src/components/Signup.js
+import { useState } from 'react';
 
 const Signup = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (password !== confirmPassword) {
-      alert('Passwords do not match!');
-      return;
+  const handleSignup = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        console.log('Signup successful:', data.message);
+      } else {
+        console.error('Signup failed:', data.error);
+      }
+    } catch (error) {
+      console.error('Error:', error);
     }
-    console.log('Signup details:', email, password);
   };
 
   return (
-    <div>
-      <NavBar />
-      <div className="signup-container">
-        <h2 className="signup-title">Signup</h2>
-        <form className="signup-form" onSubmit={handleSubmit}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="signup-input"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-            className="signup-input"
-          />
-          <input
-            type="password"
-            placeholder="Confirm Password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-            className="signup-input"
-          />
-          <button type="submit" className="signup-button">Signup</button>
-        </form>
-      </div>
-    </div>
+    <form onSubmit={handleSignup}>
+      <input
+        type="text"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        placeholder="Username"
+      />
+      <input
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        placeholder="Password"
+      />
+      <button type="submit">Sign Up</button>
+    </form>
   );
 };
 
