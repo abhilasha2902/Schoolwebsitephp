@@ -24,7 +24,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        const response = await fetch('/React/process_admission.php', {
+        const response = await fetch('/backend/process_admission.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
